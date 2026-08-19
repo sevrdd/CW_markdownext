@@ -1,7 +1,3 @@
-## Requis
-- Tableaux
-    - Grille, Cellule combinée
-- Diapositives
-- Listes (plusieurs sortes)
-- Gerer des images (plusieurs sortes)
-- Textes de documents externes
+# Markdown extension
+
+Extension permettant de gérer plusieurs paramètres pour différents types d’images.
