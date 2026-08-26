@@ -1,11 +1,24 @@
 import mistletoe
 
-with open('foo.md', 'r') as fin:
-    rendered = mistletoe.markdown(fin)
-    print(rendered)
+flag_resize = "@@@"
+resize_flag = False
 
+md_content = []
+img_var = []
 
-""" Pertinent
+with open('foo.md', 'r', encoding='utf-8') as fin: ## to add a var for the file name so it can be more dynamic
+    literal_content = fin.read()
+    # I KNOW ITS NOT ELEGANT LOL
+    for word in literal_content.splitlines():
+      if word.strip() == flag_resize:
+        resize_flag = not resize_flag
+      if resize_flag == True:
+        img_var.append(word)
+      md_content.append(word)
+    print(img_var)
+    print(md_content)
+
+"""
 <!DOCTYPE html>
 <html>
 <head>
