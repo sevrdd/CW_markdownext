@@ -14,5 +14,5 @@
 
 ### Features (Priorisée)
 1. Changer la taille de l'image.
-2. Pouvoir déplacer l'image (Besoin de CSS)
-3. Pouvoir faire une gallerie de photo (dépend de #2)
+2. Pouvoir déplacer l'image (Besoin de CSS) | Optionnel
+3. Pouvoir faire une gallerie de photo (dépend de #2) | Optionnel
