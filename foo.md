@@ -7,7 +7,10 @@
 - Textes de documents externes
 
 @@@
-C:\Users\zevvvf\Documents\Proj Github\CI3-Noeud-de-capteur-
-50
-50
+src: test1.png
+width: 300
+height: 300
+margin-left: 50px
+margin-top: 20px
+border-radius: 10px
 @@@
