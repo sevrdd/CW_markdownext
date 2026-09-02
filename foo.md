@@ -7,10 +7,11 @@
 - Textes de documents externes
 
 @@@
-src: test1.png
-width: 300
-height: 300
+src: testimages/test1.png
+width: 500px
+height: 200px
 margin-left: 50px
 margin-top: 20px
-border-radius: 10px
+border-radius: 250px
+filter: saturation(3)
 @@@
