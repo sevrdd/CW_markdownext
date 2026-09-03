@@ -7,10 +7,11 @@
 - Textes de documents externes
 
 @@@
-src: testimages/test2.jfif
+src: testimages/test1.png
 width: 500px
-height: 500px
+height: 300px
 margin-left: 1px
 margin-top: 1px
-border-radius: 10px
+border-radius: 100px
+filter: blur(50px)
 @@@
