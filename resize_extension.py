@@ -55,7 +55,7 @@ def preprocess(text):
             if j >= len(lines):
                 raise ValueError(
                     f"@@@ Invalide a la ligne {i + 1}: "
-                    "expected closing @@@."
+                    "@@@ de fermeture attendue."
                 )
 
             # Dictionnaire contenant les propriétés de l'image
@@ -97,7 +97,7 @@ def preprocess(text):
             if "src" not in properties:
                 raise ValueError(
                     f"@@@ Invalide a la ligne {i + 1}: "
-                    "missing 'src'."
+                    "'src' manquant."
                 )
 
             # Récupère le chemin de l'image

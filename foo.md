@@ -9,9 +9,9 @@
 @@@
 src: testimages/test1.png
 width: 500px
-height: 200px
-margin-left: 50px
-margin-top: 20px
-border-radius: 250px
-filter: saturation(3)
+height: 300px
+margin-left: 1px
+margin-top: 1px
+border-radius: 100px
+filter: blur(50px)
 @@@
