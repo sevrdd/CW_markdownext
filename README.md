@@ -21,7 +21,7 @@ render_markdown_file("foo.md", "foo.html")
 
 Pour insérer une image avec des styles personnalisés, utilisez la syntaxe d'exemple suivante:
 
-'''
+```
 @@@
 src: ocean.jpg
 width: 300px
@@ -30,7 +30,8 @@ margin-left: 50px
 margin-top: 20px
 border-radius: 10px
 @@@
-'''
+```
+
 
 Puisque cette extension est un wrapper CSS, les propriétés possibles, ainsi que la syntaxe associée sont identique.
 
