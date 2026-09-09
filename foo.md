@@ -1,3 +1,12 @@
+@@@
+src: testimages/test2.jfif
+width: 1000px
+height: 10000px
+float: right
+border-radius: 100px
+filter: invert(100%) contrast(2) blur(10000px) saturate(2)
+@@@
+
 ## Requis
 - Tableaux
     - Grille, Cellule combinée
@@ -6,12 +15,3 @@
 - Gerer des images (plusieurs sortes)
 - Textes de documents externes
 
-@@@
-src: testimages/test1.png
-width: 500px
-height: 300px
-margin-left: 1px
-margin-top: 1px
-border-radius: 100px
-filter: blur(50px)
-@@@
