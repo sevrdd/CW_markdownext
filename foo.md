@@ -2,10 +2,19 @@
 src: testimages/test3.png
 width: 300px
 height: 300px
-margin-left: 50px
-margin-top: 20px
-border-radius: 100px
-filter: contrast(2)
+float: left
+@@@
+
+@@@
+src: testimages/test2.jfif
+width: 300px
+height: 300px
+@@@
+
+@@@
+src: testimages/test1.png
+width: 300px
+height: 300px
 @@@
 
 ## TEXT EXAMPLE
