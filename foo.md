@@ -1,17 +1,22 @@
 @@@
-src: testimages/test2.jfif
-width: 1000px
-height: 10000px
-float: right
+src: testimages/test3.png
+width: 300px
+height: 300px
+margin-left: 50px
+margin-top: 20px
 border-radius: 100px
-filter: invert(100%) contrast(2) blur(10000px) saturate(2)
+filter: contrast(2)
 @@@
 
-## Requis
-- Tableaux
-    - Grille, Cellule combinée
-- Diapositives
-- Listes (plusieurs sortes)
-- Gerer des images (plusieurs sortes)
-- Textes de documents externes
+## TEXT EXAMPLE
+hjfdskjfasdjlkasfdjlkjlk;fdfdas
+fdsa
+fasd
+fsda
+fsd
+fds
+dfa
+sasdf
+fdas
+
 
