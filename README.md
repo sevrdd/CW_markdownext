@@ -29,6 +29,7 @@ height: 300px
 margin-left: 50px
 margin-top: 20px
 border-radius: 10px
+alt: texte alternatif ici
 @@@
 ```
 
