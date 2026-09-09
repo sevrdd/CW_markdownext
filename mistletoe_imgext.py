@@ -58,7 +58,7 @@ VALID_CSS_PROPERTIES = {
     "transition-duration", "transition-property",
     "transition-timing-function", "translate", "user-select",
     "vertical-align", "visibility", "white-space", "width", "word-break",
-    "word-spacing", "word-wrap", "z-index", "src", "alt"
+    "word-spacing", "word-wrap", "z-index", "src", "alt", "title"
 }
 
 def preprocess(text):
@@ -137,6 +137,11 @@ def preprocess(text):
                     print("alt detected")
                     continue
 
+                if key == "title":
+                    title_description = value
+                    print("title detected")
+                    continue
+
                 # Vérifie que la clé est une propriété CSS valide
                 if key not in VALID_CSS_PROPERTIES:
                     raise ValueError(
@@ -182,7 +187,11 @@ def preprocess(text):
             if alt_description:
                 html += f' alt="{alt_description}"'
 
+            if alt_description:
+                html += f' title="{title_description}"'
+
             alt_description = ""  # Reset pour pas leak
+            title_description = ""  # Reset pour pas leak
 
             # Pour fermer la balise img, on ajoute le ">" à la fin
             html += '>'

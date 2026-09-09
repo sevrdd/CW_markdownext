@@ -4,6 +4,7 @@ width: 300px
 height: 300px
 float: left
 alt: test alt
+title: test
 @@@
 
 @@@
