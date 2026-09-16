@@ -31,3 +31,14 @@ sasdf
 fdas
 
 
+## 1. Test des couleurs simples
+
+{{red|Texte rouge}}
+
+{{blue|Texte bleu}}
+
+{{green|Texte vert}}
+
+{{purple|Texte mauve}}
+
+
