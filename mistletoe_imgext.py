@@ -1,5 +1,5 @@
 from mistletoe import markdown
-import highlighter.py 
+import highlighter
 
 # Creation d'un gabarit HTML pour le rendu final
 PAGE_TEMPLATE = """<!DOCTYPE html>
@@ -188,9 +188,6 @@ def preprocess(text):
             if alt_description:
                 html += f' alt="{alt_description}"'
 
-            if alt_description:
-                html += f' title="{title_description}"'
-
             alt_description = ""  # Reset pour pas leak
             title_description = ""  # Reset pour pas leak
 
@@ -238,6 +235,8 @@ def render_markdown_file(md_path, html_path):
     with open(html_path, "w", encoding="utf-8") as fout:
         fout.write(html)
         print("Fichier HTML généré avec succès: ", html_path)
+
+    highlighter.highlight_main(filename=html_path)  # Appel de la fonction highlight_main pour styliser le texte
 
 if __name__ == "__main__":
     render_markdown_file("foo.md", "foo.html")

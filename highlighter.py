@@ -69,63 +69,64 @@ def ajouter_style(match):
     return f'<span style="{style_html}">{texte}</span>'
 
 
-# Lire le fichier Markdown
-with open("Test.md", "r", encoding="utf-8") as fichier:
-    texte = fichier.read()
+def highlight_main(filename):
+    # Lire le fichier Markdown
+    with open(filename, "r", encoding="utf-8") as fichier:
+        texte = fichier.read()
 
 
-# Permet d'écrire un titre comme :
-# {{red|# Mon titre}}
-texte = re.sub(
-    r'^\{\{([^|]+)\|(#{1,6})\s+(.+?)\}\}$',
-    r'\2 {{\1|\3}}',
-    texte,
-    flags=re.MULTILINE
-)
+    # Permet d'écrire un titre comme :
+    # {{red|# Mon titre}}
+    texte = re.sub(
+        r'^\{\{([^|]+)\|(#{1,6})\s+(.+?)\}\}$',
+        r'\2 {{\1|\3}}',
+        texte,
+        flags=re.MULTILINE
+    )
 
 
-# Conserve les sauts de ligne entre deux textes stylés
-texte = re.sub(
-    r"\}\}\n(?=\{\{)",
-    "}}  \n",
-    texte
-)
+    # Conserve les sauts de ligne entre deux textes stylés
+    texte = re.sub(
+        r"\}\}\n(?=\{\{)",
+        "}}  \n",
+        texte
+    )
 
 
-# Conversion Markdown vers HTML
-html = mistletoe.markdown(texte)
+    # Conversion Markdown vers HTML
+    html = mistletoe.markdown(texte)
 
 
-# Remplace la syntaxe {{couleur|texte}}
-html = re.sub(
-    r"\{\{([^|]+)\|(.+?)\}\}",
-    ajouter_style,
-    html
-)
+    # Remplace la syntaxe {{couleur|texte}}
+    html = re.sub(
+        r"\{\{([^|]+)\|(.+?)\}\}",
+        ajouter_style,
+        html
+    )
 
 
-# Création du document HTML complet
-html_final = f"""<!DOCTYPE html>
-<html lang="fr">
+    # Création du document HTML complet
+    html_final = f"""<!DOCTYPE html>
+    <html lang="fr">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Document Markdown</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Document Markdown</title>
+    </head>
 
-<body>
+    <body>
 
-{html}
+    {html}
 
-</body>
+    </body>
 
-</html>
-"""
-
-
-# Création du fichier HTML
-with open("output.html", "w", encoding="utf-8") as fichier:
-    fichier.write(html_final)
+    </html>
+    """
 
 
-print("Le fichier HTML a été créé.")
+    # Création du fichier HTML
+    with open(filename, "w", encoding="utf-8") as fichier:
+        fichier.write(html_final)
+
+
+    print("Le fichier HTML a été créé.")
