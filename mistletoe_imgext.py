@@ -1,4 +1,5 @@
 from mistletoe import markdown
+import highlighter.py 
 
 # Creation d'un gabarit HTML pour le rendu final
 PAGE_TEMPLATE = """<!DOCTYPE html>
